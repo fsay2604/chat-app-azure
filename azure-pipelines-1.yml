@@ -12,8 +12,8 @@ stages:
           npm run build --if-present
           npm run test --if-present
 
- - stage: Deploy stage
-   displayName: Deploy stage
+ - stage: Deploy_stage
+   displayName: Deploy_stage
    jobs:
     - deployment:
       environment: Chat-app-env
