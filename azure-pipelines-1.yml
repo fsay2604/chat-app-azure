@@ -8,7 +8,7 @@ stages:
     - deployment:
       environment: Chat-app-env
       strategy:
-        rolling:
+        runOnce:
           deploy:
             steps:
               - script: |
