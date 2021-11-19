@@ -5,8 +5,8 @@ stages:
  - stage: Install_stage
    displayName: Install_stage
    jobs:
-    - job: npm-install
-      displayName: npm-install
+    - job: npm_install
+      displayName: npm_install
         - script:|
           npm install
           npm run build --if-present
