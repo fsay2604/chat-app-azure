@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+stages:
+ - stage: Install stage
+   displayName: Install stage
+   jobs:
+    - job: npm-install
+      displayName: npm-install
+      - script: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
+ - stage: Deploy stage
+   displayName: Deploy stage
+   jobs:
+    strategy:
+      rolling:
+        deploy:
+          steps:
+            - script: |
+                cd /var/www/html/testingAzure
+                git pull
