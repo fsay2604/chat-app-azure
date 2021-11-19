@@ -2,8 +2,8 @@ trigger:
 - master
   
 stages:
- - stage: Install stage
-   displayName: Install stage
+ - stage: Install_stage
+   displayName: Install_stage
    jobs:
     - job: npm-install
       displayName: npm-install
@@ -16,6 +16,7 @@ stages:
    displayName: Deploy stage
    jobs:
     - deployment:
+      environment: Chat-app-env
       strategy:
         rolling:
           deploy:
