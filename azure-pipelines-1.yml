@@ -5,7 +5,7 @@ stages:
    displayName: Deploy_stage
    jobs:
     - deployment:
-      environment: Chat-app-env
+      environment: chat-app-env
       strategy:
         runOnce:
           deploy:
