@@ -68,6 +68,10 @@ server.create()
             
         })
 
+        app.post('/restart', function (req, res) {
+            process.exit(1);
+          });
+
 
         app.post('/messages', (req, res) => {
 
