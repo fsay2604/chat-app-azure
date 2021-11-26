@@ -12,7 +12,6 @@ stages:
           deploy:
             steps:
               - script: |
-                  pwd
                   sudo npm install
                   echo 'npm installed!'
                   #sudo npm run
