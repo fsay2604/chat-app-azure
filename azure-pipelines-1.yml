@@ -13,5 +13,5 @@ stages:
             - task: Npm@1
               inputs:
                 command: 'install'
-                workingDir: '../../../../../var/www/html/chat-app-azure'
+                workingDir: '/var/www/html/chat-app-azure/'
                 verbose: true
