@@ -1,6 +1,5 @@
 trigger:
 - master
-  
 stages:
  - stage: Deploy_stage
    displayName: Deploy_stage
@@ -11,10 +10,8 @@ stages:
         runOnce:
           deploy:
             steps:
-              - script: |
-                  workingDirectory: $(BuildDirectory)
-                  echo $(BuildDirectory)
-                  #sudo npm install
-                  echo 'npm installed!'
-                  #sudo npm run
-                  #sudo npm run test --if-present
+            - task: Npm@1
+              inputs:
+                command: 'install'
+                workingDir: '/var/www/html/chat-app-azure'
+                verbose: true
