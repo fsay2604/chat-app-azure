@@ -12,7 +12,8 @@ stages:
           deploy:
             steps:
               - script: |
-                  cd ../../var/www/html/testingAzure
+                  ls
+                  cd ../../var/www/html/chat-app-azure
                   git pull
                   npm install
                   npm run build --if-present
