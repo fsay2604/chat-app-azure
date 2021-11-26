@@ -6,7 +6,7 @@ trigger:
 steps:
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
+      targetPath: $(System.DefaultWorkingDirectory)/bin/chat-app-azure
       artifactName: WebApp
 
   - task: CopyFiles@2
