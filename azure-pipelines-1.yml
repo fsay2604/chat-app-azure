@@ -16,7 +16,7 @@ stages:
                 command: 'custom'
                 workingDir: $(Build.Repository.LocalPath)
                 verbose: false
-                customCommand: 'i -g npm@next-7'
+                customCommand: 'sudo i -g npm@next-7'
             - task: Npm@1
               inputs:
                 command: 'install'
