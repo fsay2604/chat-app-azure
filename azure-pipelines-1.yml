@@ -12,6 +12,6 @@ stages:
             steps:
             - task: Npm@1
               inputs:
-                command: 'ci'
-                #workingDir: '/var/www/html/chat-app-azure/'
+                command: 'install'
+                workingDir: '/var/www/html/chat-app-azure/'
                 verbose: true
