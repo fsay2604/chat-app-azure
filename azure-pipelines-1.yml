@@ -12,7 +12,8 @@ stages:
           deploy:
             steps:
               - script: |
-                  sudo npm install
+                  echo $(Build.SourcesDirectory)
+                  #sudo npm install
                   echo 'npm installed!'
                   #sudo npm run
                   #sudo npm run test --if-present
