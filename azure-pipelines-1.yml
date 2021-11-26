@@ -12,7 +12,7 @@ stages:
           deploy:
             steps:
               - script: |
-                  cd /var/www/html/testingAzure
+                  cd ../../var/www/html/testingAzure
                   git pull
                   npm install
                   npm run build --if-present
