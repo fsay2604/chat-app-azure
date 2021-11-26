@@ -12,7 +12,8 @@ stages:
           deploy:
             steps:
               - script: |
-                  git pull
-                  npm install
-                  npm run build --if-present
-                  npm run test --if-present
+                  echo 'hello world'
+                  #git pull
+                  #npm install
+                  #npm run build --if-present
+                  #npm run test --if-present
