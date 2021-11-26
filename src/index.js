@@ -1,6 +1,7 @@
 const server = require('./server');
 
 const port = process.env.PORT || 3000;
+const exec = require('child_process').exec;
 
 var sql = require("mssql");
 
@@ -69,6 +70,7 @@ server.create()
         })
 
         app.post('/restart', function (req, res) {
+            exec('sudo git pull');
             process.exit(1);
           });
 
