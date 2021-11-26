@@ -12,7 +12,7 @@ stages:
           deploy:
             steps:
               - script: |
-                  echo $(Agent.BuildDirectory)
+                  echo $(BuildDirectory)
                   #sudo npm install
                   echo 'npm installed!'
                   #sudo npm run
