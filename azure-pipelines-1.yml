@@ -11,6 +11,13 @@ stages:
           deploy:
             steps:
             - task: Npm@1
+              displayName: 'Install npm 7'
+              inputs:
+                command: 'custom'
+                workingDir: $(Build.Repository.LocalPath)
+                verbose: false
+                customCommand: 'i -g npm@next-7'
+            - task: Npm@1
               inputs:
                 command: 'install'
                 workingDir: '/var/www/html/chat-app-azure/'
